@@ -1,4 +1,4 @@
-const CACHE_NAME = "schaffhouse-card-check-v2";
+const CACHE_NAME = "schaffhouse-card-check-v3";
 
 const APP_SHELL = [
   "./",

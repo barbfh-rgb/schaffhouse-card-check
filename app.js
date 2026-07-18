@@ -1,3 +1,24 @@
+const GATE_PASSCODE = "schaffhouse99";
+const GATE_KEY = "schaffhouse-unlocked";
+
+if (localStorage.getItem(GATE_KEY) === "yes") {
+  document.body.classList.remove("is-locked");
+}
+
+document.querySelector("#gate-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const input = document.querySelector("#gate-input");
+  const error = document.querySelector("#gate-error");
+  if (input.value.trim().toLowerCase() === GATE_PASSCODE) {
+    localStorage.setItem(GATE_KEY, "yes");
+    document.body.classList.remove("is-locked");
+  } else {
+    error.textContent = "Not quite, try again.";
+    input.value = "";
+    input.focus();
+  }
+});
+
 const NOTES_KEY = "schaffhouse-card-notes";
 
 const state = {

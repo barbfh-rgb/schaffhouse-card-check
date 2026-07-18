@@ -14,7 +14,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body class="is-locked">
+    <div class="gate" role="dialog" aria-labelledby="gate-title">
+      <div class="gate-panel">
+        <p class="eyebrow">1JJ Swiss Tarot</p>
+        <h1 id="gate-title">Schaffhouse<br>Card Check</h1>
+        <form id="gate-form">
+          <label for="gate-input">Passcode</label>
+          <input id="gate-input" type="password" autocomplete="off" spellcheck="false">
+          <button type="submit">Enter</button>
+          <p id="gate-error" class="gate-error" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
     <header class="app-header">
       <p class="eyebrow">1JJ Swiss Tarot · Schaffhouse, 1965</p>
       <h1>Schaffhouse<br>Card Check</h1>

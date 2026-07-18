@@ -26,6 +26,91 @@ body {
   background-attachment: fixed;
 }
 
+body.is-locked .app-header,
+body.is-locked main,
+body.is-locked .app-footer {
+  display: none;
+}
+
+body:not(.is-locked) .gate {
+  display: none;
+}
+
+.gate {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  background: radial-gradient(ellipse at 50% 0%, #fdf9ee 0%, #f8efdb 55%, #f1e4c8 100%);
+  z-index: 10;
+}
+
+.gate-panel {
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  padding: 2rem 1.4rem;
+  box-shadow: 0 2px 12px rgba(168, 132, 44, 0.08);
+}
+
+.gate-panel h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.gate-panel label {
+  display: block;
+  font-family: "Cinzel", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 1rem 0 0.4rem;
+}
+
+.gate-panel input {
+  width: 100%;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  text-align: center;
+  color: var(--ink);
+  background: #fffdf7;
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+}
+
+.gate-panel input:focus {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 1px;
+}
+
+.gate-panel button {
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: #fffcf3;
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  padding: 0.6rem 1.6rem;
+  margin-top: 0.9rem;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.gate-error {
+  font-style: italic;
+  color: #a04b2f;
+  min-height: 1.4em;
+  margin: 0.6rem 0 0;
+}
+
 .app-header {
   position: relative;
   text-align: center;

@@ -3,12 +3,12 @@
 }
 
 :root {
-  --gold: #c9a84c;
-  --gold-bright: #e8c96a;
-  --ink: #f2ecdf;
-  --ink-soft: rgba(242, 236, 223, 0.75);
-  --panel-bg: rgba(20, 10, 40, 0.72);
-  --panel-border: rgba(201, 168, 76, 0.35);
+  --gold: #a8842c;
+  --gold-bright: #c9a84c;
+  --ink: #3a2c14;
+  --ink-soft: rgba(58, 44, 20, 0.7);
+  --panel-bg: rgba(255, 252, 243, 0.85);
+  --panel-border: rgba(168, 132, 44, 0.4);
 }
 
 html {
@@ -22,23 +22,8 @@ body {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.15rem;
   line-height: 1.55;
-  background: radial-gradient(ellipse at 50% 0%, #1e0a3a 0%, #0e0720 55%, #05030f 100%);
+  background: radial-gradient(ellipse at 50% 0%, #fdf9ee 0%, #f8efdb 55%, #f1e4c8 100%);
   background-attachment: fixed;
-}
-
-.stars {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    radial-gradient(1px 1px at 12% 18%, rgba(232, 201, 106, 0.9), transparent 100%),
-    radial-gradient(1px 1px at 78% 9%, rgba(255, 255, 255, 0.7), transparent 100%),
-    radial-gradient(1.5px 1.5px at 33% 62%, rgba(232, 201, 106, 0.6), transparent 100%),
-    radial-gradient(1px 1px at 61% 41%, rgba(255, 255, 255, 0.5), transparent 100%),
-    radial-gradient(1px 1px at 89% 71%, rgba(232, 201, 106, 0.7), transparent 100%),
-    radial-gradient(1.5px 1.5px at 8% 84%, rgba(255, 255, 255, 0.4), transparent 100%),
-    radial-gradient(1px 1px at 45% 12%, rgba(255, 255, 255, 0.6), transparent 100%),
-    radial-gradient(1px 1px at 70% 88%, rgba(232, 201, 106, 0.5), transparent 100%);
 }
 
 .app-header {
@@ -62,8 +47,8 @@ h1 {
   font-size: clamp(1.7rem, 6vw, 2.6rem);
   line-height: 1.15;
   margin: 0;
-  color: var(--gold-bright);
-  text-shadow: 0 0 18px rgba(232, 201, 106, 0.35);
+  color: var(--gold);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .tagline {
@@ -85,7 +70,7 @@ main {
   border-radius: 18px;
   padding: 1.1rem;
   margin-bottom: 1.1rem;
-  backdrop-filter: blur(3px);
+  box-shadow: 0 2px 12px rgba(168, 132, 44, 0.08);
 }
 
 .filters {
@@ -110,8 +95,8 @@ main {
 
 .filter-button.is-active {
   background: linear-gradient(180deg, var(--gold-bright), var(--gold));
-  color: #1a102e;
-  border-color: var(--gold-bright);
+  color: #fffcf3;
+  border-color: var(--gold);
   font-weight: 600;
 }
 
@@ -120,7 +105,7 @@ main {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.1rem;
   color: var(--ink);
-  background: rgba(5, 3, 15, 0.55);
+  background: #fffdf7;
   border: 1px solid var(--panel-border);
   border-radius: 12px;
   padding: 0.7rem 0.9rem;
@@ -128,7 +113,7 @@ main {
 }
 
 .search-input::placeholder {
-  color: rgba(242, 236, 223, 0.45);
+  color: rgba(58, 44, 20, 0.4);
   font-style: italic;
 }
 
@@ -147,7 +132,7 @@ textarea:focus {
   overflow-y: auto;
   padding-right: 2px;
   scrollbar-width: thin;
-  scrollbar-color: rgba(201, 168, 76, 0.45) transparent;
+  scrollbar-color: rgba(168, 132, 44, 0.45) transparent;
 }
 
 .card-list::-webkit-scrollbar {
@@ -155,7 +140,7 @@ textarea:focus {
 }
 
 .card-list::-webkit-scrollbar-thumb {
-  background: rgba(201, 168, 76, 0.45);
+  background: rgba(168, 132, 44, 0.45);
   border-radius: 999px;
 }
 
@@ -168,8 +153,8 @@ textarea:focus {
   font-size: 1.02rem;
   text-align: left;
   color: var(--ink);
-  background: rgba(30, 10, 58, 0.55);
-  border: 1px solid rgba(201, 168, 76, 0.22);
+  background: #fffdf7;
+  border: 1px solid rgba(168, 132, 44, 0.25);
   border-radius: 12px;
   padding: 0.55rem 0.7rem;
   cursor: pointer;
@@ -186,13 +171,13 @@ textarea:focus {
 }
 
 .card-button.is-active {
-  border-color: var(--gold-bright);
-  box-shadow: 0 0 10px rgba(232, 201, 106, 0.35);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.35);
 }
 
 .card-button.has-note .numeral::after {
   content: " ✦";
-  color: var(--gold-bright);
+  color: var(--gold);
 }
 
 .no-results {
@@ -224,7 +209,7 @@ textarea:focus {
 .detail-panel h2 {
   font-family: "Cinzel Decorative", "Cinzel", serif;
   font-size: 1.55rem;
-  color: var(--gold-bright);
+  color: var(--gold);
   margin: 0 0 0.2rem;
 }
 
@@ -270,7 +255,7 @@ textarea:focus {
   font-size: 1.1rem;
   line-height: 1.5;
   color: var(--ink);
-  background: rgba(5, 3, 15, 0.55);
+  background: #fffdf7;
   border: 1px solid var(--panel-border);
   border-radius: 12px;
   padding: 0.7rem 0.9rem;
@@ -307,7 +292,7 @@ textarea:focus {
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(201, 168, 76, 0.6);
+  color: rgba(168, 132, 44, 0.7);
   margin: 0;
 }
 

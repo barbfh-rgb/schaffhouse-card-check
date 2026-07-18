@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0e0720">
+    <meta name="description" content="Schaffhouse Card Check — meanings and personal notes for the 1JJ Swiss Tarot.">
+    <title>Schaffhouse Card Check</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="stars" aria-hidden="true"></div>
+
+    <header class="app-header">
+      <p class="eyebrow">1JJ Swiss Tarot · Schaffhouse, 1965</p>
+      <h1>Schaffhouse<br>Card Check</h1>
+      <p class="tagline">Traditional meanings, upright only — with room for your own.</p>
+    </header>
+
+    <main>
+      <section class="panel" aria-label="Find a card">
+        <div class="filters" role="group" aria-label="Filter cards">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="major" aria-pressed="false">Majors</button>
+          <button class="filter-button" type="button" data-filter="Coins" aria-pressed="false">Coins</button>
+          <button class="filter-button" type="button" data-filter="Cups" aria-pressed="false">Cups</button>
+          <button class="filter-button" type="button" data-filter="Swords" aria-pressed="false">Swords</button>
+          <button class="filter-button" type="button" data-filter="Wands" aria-pressed="false">Wands</button>
+        </div>
+
+        <label class="visually-hidden" for="card-search">Search by card name</label>
+        <input id="card-search" class="search-input" type="search" placeholder="Search a card…" autocomplete="off" spellcheck="false">
+
+        <div id="card-list" class="card-list"></div>
+      </section>
+
+      <section id="detail-panel" class="panel detail-panel is-empty" aria-live="polite">
+        <p class="detail-hint">Tap a card to see its meaning.</p>
+        <div id="detail-body" hidden>
+          <p id="detail-numeral" class="detail-numeral"></p>
+          <h2 id="detail-name"></h2>
+          <p id="detail-french" class="detail-french"></p>
+          <p id="detail-suit" class="detail-suit"></p>
+          <p id="detail-keywords" class="detail-keywords"></p>
+          <p id="detail-meaning" class="detail-meaning"></p>
+
+          <div class="notes-block">
+            <label for="detail-notes">Your notes</label>
+            <textarea id="detail-notes" rows="4" placeholder="Your own impressions and meanings…"></textarea>
+            <p id="notes-status" class="notes-status">Notes save automatically on this device.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel about-panel">
+        <details>
+          <summary>About this deck</summary>
+          <div id="about-body"></div>
+        </details>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>Barbara Ford-Hammond</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
